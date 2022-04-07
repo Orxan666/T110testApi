@@ -3,8 +3,10 @@ import "./header.scss";
 import Logo from "../../image/logo-light.webp";
 import { Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
-import Basket from "../basket/Basket";
+import {GrBasket} from 'react-icons/gr'
+
 const Header = () => {
+  console.log("Header Yuklendi");
   return (
     <div className="header">
       <div className="meriCont">
@@ -28,13 +30,21 @@ const Header = () => {
               <li>
                 <Link to="blog">Blog</Link>
               </li>
+              <li>
+                <Link to="products"><i className="fa fa-shopping-basket"></i>shop</Link>
+              </li>
             </ul>
           </div>
           <div className="search">
             <input placeholder="Search" type="text" />
             <FaSearch className="searchIco" />
           </div>
-          <Basket />
+          <div className="basket-content">
+          <div className="basket">
+        <GrBasket className="grIcon"/>
+      </div>
+
+          </div>
         </div>
       </div>
     </div>
